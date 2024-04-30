@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/base@sha256:98a855f963d5d3ec742a7b94827b24b4f513fe5f5e010fbbb8654bafda6d498b
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  service:
+    image: mcr.microsoft.com/devcontainers/base@sha256:98a855f963d5d3ec742a7b94827b24b4f513fe5f5e010fbbb8654bafda6d498b
+    command: /bin/sh -c "while sleep 1000; do :; done"
