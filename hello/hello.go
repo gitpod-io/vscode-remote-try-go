@@ -1,6 +1,6 @@
 package hello
 
-// User user type
+// User user type2
 type User struct {
 	ID   int64
 	Name string
