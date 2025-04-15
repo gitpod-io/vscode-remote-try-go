@@ -1,0 +1,8 @@
+services:
+  foo:
+    name: foo
+    invalidCommand:
+      start: |
+        echo "Starting foo"
+        sleep 10
+        echo "Foo started"
