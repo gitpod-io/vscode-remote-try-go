@@ -1,0 +1,5 @@
+tasks:
+  foo:
+    name: "foo"
+    command: |
+      echo "Hello, world!"
