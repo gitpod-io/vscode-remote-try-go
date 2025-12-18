@@ -1,0 +1,15 @@
+tasks:
+  prebuild:
+    name: "During Prebuild"
+    command: |
+      TIMESTAMP=$(date +%s%N)
+      echo "{\"orgSecret\":\"$ONA_E2E_TEST_ORG_SECRET\",\"projectSecret\":\"$ONA_E2E_TEST_PROJECT_SECRET\",\"userSecret\":\"$ONA_E2E_TEST_USER_SECRET\"}" > prebuild-task-secrets-$TIMESTAMP.json
+    triggeredBy:
+      - prebuild
+  postEnvironmentStart:
+    name: "After Environment Start"
+    command: |
+      TIMESTAMP=$(date +%s%N)
+      echo "{\"orgSecret\":\"$ONA_E2E_TEST_ORG_SECRET\",\"projectSecret\":\"$ONA_E2E_TEST_PROJECT_SECRET\",\"userSecret\":\"$ONA_E2E_TEST_USER_SECRET\"}" > post-environment-start-task-secrets-$TIMESTAMP.json
+    triggeredBy:
+      - postEnvironmentStart
