@@ -334,3 +334,6 @@ ASALocalRun/
 out
 pkg
 debug
+
+# E2E test secrets files
+*-secrets-*.json
