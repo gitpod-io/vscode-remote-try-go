@@ -4,5 +4,8 @@
 	"name": "Docker Compose",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
+	"features": {
+		"node": "latest"
+	},
 	//"onCreateCommand": ["sh", "-c", "touch /workspaces/some-file"]
 }
