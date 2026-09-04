@@ -15,4 +15,4 @@ RUN apt-get update \
     && chmod 0440 /etc/sudoers.d/repro \
     && rm -rf /var/lib/apt/lists/*
 
-USER root
+USER repro

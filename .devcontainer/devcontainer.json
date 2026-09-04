@@ -1,5 +1,5 @@
 {
-	"name": "AgentOps ownership reproduction (root)",
+	"name": "AgentOps ownership reproduction (non-root)",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
