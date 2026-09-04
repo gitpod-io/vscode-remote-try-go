@@ -2,9 +2,5 @@
 	"name": "AgentOps ownership reproduction (root)",
 	"build": {
 		"dockerfile": "Dockerfile"
-	},
-	"mounts": [
-		"source=/usr/local/share/ca-certificates/gitpod-trust-bundle.crt,target=/usr/local/share/ca-certificates/gitpod-trust-bundle.crt,type=bind"
-	],
-	"postStartCommand": "sudo update-ca-certificates"
+	}
 }
