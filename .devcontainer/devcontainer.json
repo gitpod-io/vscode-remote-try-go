@@ -1,37 +1,10 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/go
 {
-	"name": "Go",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/go:1.22",
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			"settings": {},
-			"extensions": [
-				"streetsidesoftware.code-spell-checker"
-			]
-		}
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [9000],
-	// Use 'portsAttributes' to set default properties for specific forwarded ports.
-	// More info: https://containers.dev/implementors/json_reference/#port-attributes
-	"portsAttributes": {
-		"9000": {
-			"label": "Hello Remote World",
-			"onAutoForward": "notify"
-		}
+	"name": "AgentOps ownership reproduction (root)",
+	"build": {
+		"dockerfile": "Dockerfile"
 	},
 	"mounts": [
 		"source=/usr/local/share/ca-certificates/gitpod-trust-bundle.crt,target=/usr/local/share/ca-certificates/gitpod-trust-bundle.crt,type=bind"
 	],
-	"onCreateCommand": "TIMESTAMP=$(date +%s%N) && echo \"{\\\"orgSecret\\\":\\\"$ONA_E2E_TEST_ORG_SECRET\\\",\\\"projectSecret\\\":\\\"$ONA_E2E_TEST_PROJECT_SECRET\\\",\\\"userSecret\\\":\\\"$ONA_E2E_TEST_USER_SECRET\\\"}\" > onCreate-secrets-$TIMESTAMP.json",
-	"postCreateCommand": "TIMESTAMP=$(date +%s%N) && echo \"{\\\"orgSecret\\\":\\\"$ONA_E2E_TEST_ORG_SECRET\\\",\\\"projectSecret\\\":\\\"$ONA_E2E_TEST_PROJECT_SECRET\\\",\\\"userSecret\\\":\\\"$ONA_E2E_TEST_USER_SECRET\\\"}\" > postCreate-secrets-$TIMESTAMP.json",
 	"postStartCommand": "sudo update-ca-certificates"
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }
